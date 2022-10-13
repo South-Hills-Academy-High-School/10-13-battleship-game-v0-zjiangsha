@@ -16,8 +16,9 @@ function moveBoat (boatArray: Sprite[]) {
 let iterator = 0
 let cursor: Sprite = null
 let moveBoatFlag = 0
-moveBoatFlag = 1
+let smallBoatArray = ["a", "b", "c"]
 tiles.setCurrentTilemap(tilemap`level1`)
+moveBoatFlag = 1
 cursor = sprites.create(img`
     1 1 1 1 1 . . . . . . 1 1 1 1 1 
     1 1 1 . . . . . . . . . . 1 1 1 
@@ -38,7 +39,7 @@ cursor = sprites.create(img`
     `, SpriteKind.Player)
 grid.snap(cursor)
 grid.moveWithButtons(cursor)
-let smallBoatArray = [sprites.create(img`
+smallBoatArray = [sprites.create(img`
     . . . . . b b b b b b . . . . . 
     . . . b b 9 9 9 9 9 9 b b . . . 
     . . b b 9 9 9 9 9 9 9 9 b b . . 
